@@ -24,7 +24,7 @@ export default function NavigationBar({
       <div className="navigation-title-wrapper flex items-center">
         {showBackButton && (
           <IconButton
-            alt=""
+            alt="back-arrow"
             iconPath={`/icons/ic-cancel${isDark ? "-white" : ""}.svg`}
             size="medium"
             onClick={onBackButtonClick}
@@ -40,7 +40,7 @@ export default function NavigationBar({
       </div>
       {showCancelButton && (
         <IconButton
-          alt=""
+          alt="close"
           iconPath={`/icons/ic-cancel${isDark ? "-white" : ""}.svg`}
           size="medium"
           onClick={onCancelButtonClick}
