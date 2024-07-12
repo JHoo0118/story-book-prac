@@ -11,6 +11,7 @@ const config: StorybookConfig = {
     "@storybook/addon-interactions",
     "@storybook/addon-mdx-gfm",
     "@storybook/addon-a11y",
+    "@storybook/addon-interactions",
   ],
 
   framework: {
