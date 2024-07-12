@@ -1,15 +1,27 @@
 {
   "name": "design-system-prac",
-  "private": true,
-  "version": "0.0.0",
+  "description": "design system prac",
+  "private": false,
+  "version": "1.0.0",
   "type": "module",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
-    "index.css",
-    "src/components/",
-    "src/styles/",
-    "public/icons/"
+    "dist"
   ],
+  "main": "dist/index.umd.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./styles": "./dist/index.css"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -22,8 +34,11 @@
   },
   "dependencies": {
     "@fontsource/noto-sans-kr": "^5.0.19",
+    "design-system-prac": "^1.0.0",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "vite-plugin-dts": "^3.9.1",
+    "vite-plugin-static-copy": "^1.0.6"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.6.1",
